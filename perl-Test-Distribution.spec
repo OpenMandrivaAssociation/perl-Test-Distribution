@@ -50,7 +50,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc Changes README
+%doc Changes.pod README
 %{perl_vendorlib}/Test
 %{_mandir}/*/*
 
