@@ -9,8 +9,8 @@ Release: 	%{release}
 Summary: 	Perform tests on all modules of a distribution 
 License: 	GPL or Artistic
 Group: 		Development/Perl
-Source: 	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%{module}-%{version}.tar.bz2
-Url:            http://search.cpan.org/dist/%{module}/
+Url:        http://search.cpan.org/dist/%{module}/
+Source: 	http://www.cpan.org/modules/by-module/Test/%{module}-%{version}.tar.gz
 Buildrequires:	perl(Module::Build)
 Buildrequires:	perl(Module::Signature)
 Buildrequires:	perl(Module::CoreList)
