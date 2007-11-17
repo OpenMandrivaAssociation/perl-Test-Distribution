@@ -1,6 +1,6 @@
 %define module  Test-Distribution
 %define name	perl-%{module}
-%define version 1.27
+%define version 2.00
 %define release %mkrel 1
 
 Name: 		%{name}
