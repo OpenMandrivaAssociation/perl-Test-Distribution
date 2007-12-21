@@ -16,6 +16,7 @@ Buildrequires:	perl(Module::Signature)
 Buildrequires:	perl(Module::CoreList)
 requires:	perl(File::Find::Rule)
 BuildArch: 	noarch
+BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description
 When using this module in a test script, it goes through all the modules in
