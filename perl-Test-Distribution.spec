@@ -1,13 +1,13 @@
-%define module  Test-Distribution
+%define module	Test-Distribution
 %define name	perl-%{module}
 %define version 2.00
-%define release %mkrel 5
+%define release 6
 
-Name: 		%{name}
+Name:		%{name}
 Version: 	%{version}
 Release: 	%{release}
 Summary: 	Perform tests on all modules of a distribution 
-License: 	GPL or Artistic
+License: 	GPLv2 or Artistic
 Group: 		Development/Perl
 Url:        http://search.cpan.org/dist/%{module}/
 Source: 	http://www.cpan.org/modules/by-module/Test/%{module}-%{version}.tar.gz
@@ -20,13 +20,14 @@ BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description
 When using this module in a test script, it goes through all the modules in
-your distribution, checks their POD, checks that they compile ok and checks
+your distribution, checks their POD, checks that they compile OK and checks
 that they all define a $VERSION.
 
-This module also performs a numer of test on the distribution itself. It checks
-that your files match your SIGNATURE file if you have one. It checks that your
-distribution isn't missing certain 'core' description files. It checks to see
-you havent' missed out listing any pre-requisites in Makefile.PL.
+This module also performs a number of test on the distribution itself. 
+It checks that your files match your SIGNATURE file if you have one. It 
+checks that your distribution isn't missing certain 'core' description 
+files. It checks to see you haven't missed out listing any prerequisites 
+in Makefile.PL.
 
 It defines its own testing plan, so you usually don't use it in conjunction
 with other Test::* modules in the same file. It's recommended that you just
