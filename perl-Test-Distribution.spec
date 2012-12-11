@@ -55,3 +55,42 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Test
 %{_mandir}/*/*
 
+
+
+%changelog
+* Mon Apr 30 2012 Crispin Boylan <crisb@mandriva.org> 2.00-6
++ Revision: 794547
+- Rebuild
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 2.00-5mdv2010.0
++ Revision: 430593
+- rebuild
+
+* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 2.00-4mdv2009.0
++ Revision: 258512
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 2.00-3mdv2009.0
++ Revision: 246532
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Sat Nov 17 2007 Funda Wang <fwang@mandriva.org> 2.00-1mdv2008.1
++ Revision: 109317
+- New version 2.00
+
+  + Guillaume Rousse <guillomovitch@mandriva.org>
+    - update to new version 1.29
+
+* Thu Nov 01 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.27-1mdv2008.1
++ Revision: 104456
+- update to new version 1.27
+- fix doc files
+
+* Mon Jul 02 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.26-2mdv2008.0
++ Revision: 47042
+- rebuild
+
