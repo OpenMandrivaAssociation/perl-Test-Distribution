@@ -4,13 +4,13 @@
 %define release 6
 
 Name:		%{name}
-Version: 	%{version}
-Release: 	%{release}
+Version: 	%perl_convert_version 2.00
+Release: 	1
 Summary: 	Perform tests on all modules of a distribution 
 License: 	GPLv2 or Artistic
 Group: 		Development/Perl
 Url:        http://search.cpan.org/dist/%{module}/
-Source: 	http://www.cpan.org/modules/by-module/Test/%{module}-%{version}.tar.gz
+Source: 	http://www.cpan.org/modules/by-module/Test/Test-Distribution-2.00.tar.gz
 Buildrequires:	perl(Module::Build)
 Buildrequires:	perl(Module::Signature)
 Buildrequires:	perl(Module::CoreList)
@@ -93,4 +93,5 @@ rm -rf %{buildroot}
 * Mon Jul 02 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.26-2mdv2008.0
 + Revision: 47042
 - rebuild
+
 
