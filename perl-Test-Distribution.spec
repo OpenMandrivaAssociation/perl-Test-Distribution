@@ -1,22 +1,19 @@
 %define module	Test-Distribution
-%define name	perl-%{module}
-%define version 2.00
-%define release 6
+%define upstream_version 2.00
 
-Name:		%{name}
-Version: 	%{version}
-Release: 	%{release}
+Name:		perl-%{module}
+Version: 	%perl_convert_version %{upstream_version}
+Release: 	1
 Summary: 	Perform tests on all modules of a distribution 
 License: 	GPLv2 or Artistic
 Group: 		Development/Perl
 Url:        http://search.cpan.org/dist/%{module}/
-Source: 	http://www.cpan.org/modules/by-module/Test/%{module}-%{version}.tar.gz
+Source: 	http://www.cpan.org/modules/by-module/Test/Test-Distribution-%{upstream_version}.tar.gz
 Buildrequires:	perl(Module::Build)
 Buildrequires:	perl(Module::Signature)
 Buildrequires:	perl(Module::CoreList)
 requires:	perl(File::Find::Rule)
 BuildArch: 	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description
 When using this module in a test script, it goes through all the modules in
@@ -35,7 +32,7 @@ create a one-line test script as shown in the SYNOPSIS above. However, there
 are options...
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -43,14 +40,9 @@ are options...
 ./Build test
 
 %install
-rm -rf %{buildroot}
 ./Build install destdir=%{buildroot}
 
-%clean 
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc Changes.pod README
 %{perl_vendorlib}/Test
 %{_mandir}/*/*
@@ -93,4 +85,5 @@ rm -rf %{buildroot}
 * Mon Jul 02 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.26-2mdv2008.0
 + Revision: 47042
 - rebuild
+
 
