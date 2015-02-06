@@ -3,7 +3,7 @@
 
 Name:		perl-%{module}
 Version: 	%perl_convert_version %{upstream_version}
-Release: 	2
+Release: 	3
 Summary: 	Perform tests on all modules of a distribution 
 License: 	GPLv2 or Artistic
 Group: 		Development/Perl
