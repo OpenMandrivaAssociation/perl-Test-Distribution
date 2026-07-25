@@ -2,13 +2,13 @@
 %define upstream_version 2.00
 
 Name:		perl-%{module}
-Version: 	%perl_convert_version %{upstream_version}
-Release: 	3
+Version: 	%{upstream_version}
+Release: 	4
 Summary: 	Perform tests on all modules of a distribution 
 License: 	GPLv2 or Artistic
 Group: 		Development/Perl
-Url:        https://search.cpan.org/dist/%{module}/
-Source: 	http://www.cpan.org/modules/by-module/Test/Test-Distribution-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/Test-Distribution
+Source: 	https://cpan.metacpan.org/authors/id/S/SR/SRSHAH/Test-Distribution-%{upstream_version}.tar.gz
 Buildrequires:	perl(Module::Build)
 Buildrequires:	perl(Module::Signature)
 Buildrequires:	perl(Module::CoreList)
